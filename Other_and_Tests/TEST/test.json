@@ -1,0 +1,28 @@
+{
+  "user": {
+    "id": 12345,
+    "username": "john_doe",
+    "email": "john.doe@example.com",
+    "is_verified": true
+  },
+  "preferences": {
+    "theme": "dark",
+    "language": "en-US",
+    "notifications": {
+      "email": true,
+      "push": false
+    }
+  },
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introduction to JSON",
+      "content": "JSON (JavaScript Object Notation) is a lightweight data interchange format..."
+    },
+    {
+      "id": 2,
+      "title": "Working with JSON in Python",
+      "content": "Python provides a built-in module called 'json' for encoding and decoding JSON data..."
+    }
+  ]
+}
