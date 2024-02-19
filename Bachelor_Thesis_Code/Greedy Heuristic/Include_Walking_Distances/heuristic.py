@@ -334,6 +334,7 @@ class GreedyHeuristic:
         start_time = t.time()
         result = self.greedy_algorithm()
         end_time = t.time()
+
         print(result)
 
         self.visualize()

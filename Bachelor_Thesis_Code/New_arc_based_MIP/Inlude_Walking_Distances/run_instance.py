@@ -128,7 +128,7 @@ def run_several_instances(path, benefit_u, walking_distances):
                             None, None, None]
 
                 # Save the data in a csv file
-                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/results_test1.csv'
+                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/solving_times1.csv'
                 save_data_in_csv(data, csv_f)
 
 
