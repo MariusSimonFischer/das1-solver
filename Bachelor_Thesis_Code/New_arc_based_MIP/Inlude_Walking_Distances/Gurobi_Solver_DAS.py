@@ -88,6 +88,7 @@ class DASOptimizer:
         self.c2 = []
         self.c3 = []
         self.flow_conservation_constraint = None
+        self.no_optional_stops = None
         self.c5 = None
         self.c6 = None
 
@@ -233,6 +234,24 @@ class DASOptimizer:
                                        gp.quicksum(self.x[arc] for arc in self.network.in_edges(node)) == 0)
             for node in self.network.nodes if node != self.first_comp_stop and node != self.last_comp_stop}
 
+        # Case without optional stops
+        ##################################################################################
+        """
+        self.model.addConstr(gp.quicksum(self.x[arc] for arc in self.network.out_edges(self.first_comp_stop)) == 1)
+
+        self.model.addConstr(gp.quicksum(self.x[arc] for arc in self.network.in_edges(self.last_comp_stop)) == 1)
+
+        self.flow_conservation_constraint = {
+            node: self.model.addConstr(gp.quicksum(self.x[arc] for arc in self.network.out_edges(node)) -
+                                       gp.quicksum(self.x[arc] for arc in self.network.in_edges(node)) == 0)
+            for node in self.network.nodes if node != self.first_comp_stop and node != self.last_comp_stop
+                                              and node.is_compulsory_stop}
+
+        self.no_optional_stops = {
+            node: self.model.addConstr(gp.quicksum(self.x[arc] for arc in self.network.in_edges(node)) == 0)
+            for node in self.network.nodes if not node.is_compulsory_stop}
+        """
+        ##################################################################################
 
 
         # The constraints (2) and (3) ensure that first, the served requests within the tour and the chosen
@@ -270,7 +289,6 @@ class DASOptimizer:
 
         # Optimize the model with lazy constraints
         self.model.optimize(lazy_callback)  # lazy_callback
-
 
     def several_instances(self):
         # Check if the model is solved to optimality
@@ -369,7 +387,8 @@ class DASOptimizer:
             num_requests = len(self.request_pairs)
             num_opt_stops = len(dict_map.route_nodes) - len(dict_map.compulsory_stops)
             num_opt_stops_visited = len(used_nodes) - len(dict_map.compulsory_stops)
-            num_opt_stops_not_visited = ((len(dict_map.route_nodes) - len(dict_map.compulsory_stops)) - (len(used_nodes) - len(dict_map.compulsory_stops)))
+            num_opt_stops_not_visited = ((len(dict_map.route_nodes) - len(dict_map.compulsory_stops)) - (
+                        len(used_nodes) - len(dict_map.compulsory_stops)))
 
             # ----------Testing-----------------------------------------------------------------------------------------
 
@@ -383,11 +402,12 @@ class DASOptimizer:
             print(f"Amount compulsory stops: {len(dict_map.compulsory_stops)}")
             print(f"Amount optional stops: {len(dict_map.route_nodes) - len(dict_map.compulsory_stops)}")
             print(f"Amount of optional stops visited: {len(used_nodes) - len(dict_map.compulsory_stops)}")
-            print(f"Amount of optional stops not visited: {((len(dict_map.route_nodes) - len(dict_map.compulsory_stops)) - (len(used_nodes) - len(dict_map.compulsory_stops)))}")
-
+            print(
+                f"Amount of optional stops not visited: {((len(dict_map.route_nodes) - len(dict_map.compulsory_stops)) - (len(used_nodes) - len(dict_map.compulsory_stops)))}")
 
             return (num_segments, num_requests, served_requests, unserved_requests, used_nodes,
-                    unused_nodes, total_driven_distance, num_opt_stops, num_opt_stops_visited, num_opt_stops_not_visited,
+                    unused_nodes, total_driven_distance, num_opt_stops, num_opt_stops_visited,
+                    num_opt_stops_not_visited,
                     total_travel_time, arrival_time_at_comp_stops, solve_time, build_time, opt_gap, obj_val)
 
         else:
