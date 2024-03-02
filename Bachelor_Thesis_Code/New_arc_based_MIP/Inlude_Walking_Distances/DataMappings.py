@@ -33,7 +33,7 @@ compulsory_stops = []
 bounds = []
 time_windows = []
 
-
+total_requests_count = 0
 
 
 def find_min_distance_and_node():
@@ -76,6 +76,8 @@ def build_request_pairs():
     """
     global request_pairs
     request_pairs = []
+    global total_requests_count
+    total_requests_count = 0
 
     # Coupling origin and destination node as request:
     for entry1 in min_distance_and_node:
@@ -85,6 +87,7 @@ def build_request_pairs():
 
                 # Check whether walking distance is fullfilled:
                 # Only add a request if both nodes are within walking distance
+                total_requests_count += 1
 
                 if entry1['min_distance'] <= walking_distance and entry2['min_distance'] <= walking_distance:
 
@@ -396,7 +399,6 @@ def main(json_data, walking_dist):
 
     global walking_distance
     walking_distance = walking_dist
-
 
     # find min distance and node for each building
     find_min_distance_and_node()

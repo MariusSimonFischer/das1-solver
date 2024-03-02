@@ -39,7 +39,7 @@ plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & I
 
 
 
-
+"""
 # To perform the analysis on how much better the Gurobi Solver is compared to the heuristic methods,
 # we will calculate the percentage improvement of the Gurobi Solver's objective values over the heuristic methods.
 
@@ -51,3 +51,4 @@ improvement_over_greedy = (median_values['Gurobi Solver'] - median_values['Greed
 improvement_over_nearest_neighbour = (median_values['Gurobi Solver'] - median_values['Nearest Neighbour Heuristic']) / abs(median_values['Nearest Neighbour Heuristic']) * 100
 
 improvement_over_greedy, improvement_over_nearest_neighbour
+"""

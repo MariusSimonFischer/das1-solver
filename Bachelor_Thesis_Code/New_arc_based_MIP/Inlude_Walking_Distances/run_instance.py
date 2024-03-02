@@ -34,6 +34,9 @@ def save_data_in_csv(data, fn):
         writer.writerow(data)
 
 
+
+
+
 def run_instance(json, benefit_u, walking_distance):
     """
     Function to run an instance of the DAS problem
@@ -49,6 +52,8 @@ def run_instance(json, benefit_u, walking_distance):
 
     # benefit is static
     benefit_for_request = benefit_u
+
+    total_requests_count = dict_map.total_requests_count
 
     # Building a graph by calling the functions from network_x_graph.py
     graph = nxg.main()
@@ -71,13 +76,13 @@ def run_instance(json, benefit_u, walking_distance):
     optional_stops_visited = used_nodesx - len(compulsory_stops)
     travel_distance = total_driven_distance
     arrival_time_at_comp_stopsx = arrival_time_at_comp_stops
-    unserved_requestsx = unserved_requests
+    unserved_requestsx = total_requests_count - len(served_requests)
     solve_timex = solve_time
     build_timex = build_time
     opt_gapx = opt_gap
     obj_valx = obj_val
 
-    return (num_segments, num_requests, num_opt_stops, num_opt_stops_visited, num_opt_stops_not_visited,
+    return (num_segments, total_requests_count, num_opt_stops, num_opt_stops_visited, num_opt_stops_not_visited,
             compulsory_stops, requests, served_requestsx, used_nodesx, unused_nodesx,
             optional_stops_visited, travel_distance, arrival_time_at_comp_stopsx,
             unserved_requestsx, solve_timex, build_timex, opt_gapx, obj_valx)
@@ -118,8 +123,8 @@ def run_several_instances(path, benefit_u, walking_distances):
 
                     data = [route, route_time, percentage_of_copt_stops, benefit, wd,
                             num_segments,
-                            len(comp_stops), len(requests), num_opt_stops,
-                            used_nodes, unused_nodes, len(unserved_requests), len(served_requests),
+                            len(comp_stops), num_requests, num_opt_stops,
+                            used_nodes, unused_nodes, unserved_requests, len(served_requests),
                             optional_stops_visited, num_opt_stops_not_visited,
                             total_used_travel_time, travel_distance, build_time, solve_time, optimality_gap, obj_val]
                 except:
@@ -128,7 +133,7 @@ def run_several_instances(path, benefit_u, walking_distances):
                             None, None, None]
 
                 # Save the data in a csv file
-                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/solving_times1.csv'
+                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/all2_benefit_test.csv'
                 save_data_in_csv(data, csv_f)
 
 
@@ -136,7 +141,7 @@ if __name__ == '__main__':
     current_folder = os.path.dirname(os.path.realpath(__file__))
     pathx = os.path.join(current_folder, os.pardir, os.pardir, 'jsons', 'new_jsons_updated', 'new_jsons')
 
-    walking_distancesx = [700]
-    benefit_ux = [1000]
+    walking_distancesx = [0,100,200,300,400,500,600,700]
+    benefit_ux = [0,200,400, 600, 800, 1000, 1200, 1400, 1600, 1800]
 
     run_several_instances(pathx, benefit_ux, walking_distancesx)
