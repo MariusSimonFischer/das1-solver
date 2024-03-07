@@ -38,7 +38,7 @@ def load_json(filename):
 
 def main():
     print("Test")
-    path = "../../Bachelor_Thesis_Code/Old_data/data/output_55_07_59_30_0.json"
+    path = "../Old_data/data/output_55_07_59_30_0.json"
     data = load_json(path)
     building_pairs = data["sampled_building_pairs"]
 

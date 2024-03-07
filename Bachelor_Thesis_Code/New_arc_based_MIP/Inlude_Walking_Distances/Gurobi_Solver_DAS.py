@@ -225,6 +225,7 @@ class DASOptimizer:
 
         # Constraints (4)
         # represent flow conservation at each node in the network
+
         self.model.addConstr(gp.quicksum(self.x[arc] for arc in self.network.out_edges(self.first_comp_stop)) == 1)
 
         self.model.addConstr(gp.quicksum(self.x[arc] for arc in self.network.in_edges(self.last_comp_stop)) == 1)

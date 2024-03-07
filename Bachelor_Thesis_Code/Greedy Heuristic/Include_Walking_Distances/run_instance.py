@@ -109,13 +109,13 @@ def run_several_instances(path, benefit_u, walking_distances):
                     data = [route, route_time, percentage_of_copt_stops, benefit, wd,
                             None, None, None, None, None, None, None, None, None, None, None, None, None]
 
-                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/solving_times1.csv'
+                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/solving_times_new_tw_gh2.csv'
                 save_data_in_csv(data, csv_f)
 
 
 if __name__ == '__main__':
     current_folder = os.path.dirname(os.path.realpath(__file__))
-    pathx = os.path.join(current_folder, os.pardir, os.pardir, 'jsons', 'new_jsons_updated', 'new_jsons')
+    pathx = os.path.join(current_folder, os.pardir, os.pardir, 'jsons', 'Jsons_updated_tw', 'jsons_new_tw')
 
     benefit_ux = [1000]
     walking_distancesx = [700]

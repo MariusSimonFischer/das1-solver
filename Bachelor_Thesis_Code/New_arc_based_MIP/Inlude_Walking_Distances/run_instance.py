@@ -20,7 +20,7 @@ def save_data_in_csv(data, fn):
                'used_nodes', 'unused_nodes', 'unserved_requests', 'served_requests',
                'opt_stops_visited', 'opt_stops_not_visited',
                'total_used-travel_time', 'travel_distance',
-               'build_time', 'solve_time', 'optimality_gap', 'objective_value']
+               'build_time', 'solve_time', 'optimality_gap', 'obj_val']
 
     if not os.path.isfile(fn):
         with open(fn, 'w', newline='') as file:
@@ -133,15 +133,15 @@ def run_several_instances(path, benefit_u, walking_distances):
                             None, None, None]
 
                 # Save the data in a csv file
-                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/with_optional_stops1.csv'
+                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/comp_with_opt_stops_updated_300.csv'
                 save_data_in_csv(data, csv_f)
 
 
 if __name__ == '__main__':
     current_folder = os.path.dirname(os.path.realpath(__file__))
-    pathx = os.path.join(current_folder, os.pardir, os.pardir, 'jsons', 'new_jsons_updated', 'new_jsons')
+    pathx = os.path.join(current_folder, os.pardir, os.pardir, 'jsons', 'Jsons_updated_tw', 'jsons_new_tw')
 
-    walking_distancesx = [700]
-    benefit_ux = [1000]
+    walking_distancesx = [300]
+    benefit_ux = [1100]
 
     run_several_instances(pathx, benefit_ux, walking_distancesx)
