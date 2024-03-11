@@ -4,7 +4,10 @@ import json
 def load_json(filename):
     """
     Load a JSON file into a dictionary.
-    Args: filename (str): The name of the JSON file to be loaded.
+
+    Args:
+    filename (str): The name of the JSON file to be loaded.
+
     Returns:
     dict: The dictionary containing the data from the JSON file.
     """
@@ -22,7 +25,7 @@ def load_json(filename):
 
 def main():
     # Load the JSON file into a dictionary
-    path = '../../jsons/jsons_updated_old_tw/new_jsons/199_13_24_30_1_200_200_0.json'
+    path = '../../../Other/Old_data/data/output_55_07_59_30_0.json'
     data = load_json(path)
 
     """
@@ -33,24 +36,10 @@ def main():
         part_of_data = dict(list(data.items())[:5])
         print("Part of the loaded dictionary:")
         print(json.dumps(part_of_data, indent=4))
-    
-    # Testing data for 100% of compulsory stops
-
-    # print(len(data['time_windows']))
-
-    # print(len(data['route_nodes']))
-
-    # print(data['route_nodes'])
-
-    list = []
-    for id in data['route_nodes']:
-        if id['node_id'] not in list:
-            list.append(id['node_id'])
-
-    print(len(list))
     """
 
     return data
+
 
 
 # Call the main function
