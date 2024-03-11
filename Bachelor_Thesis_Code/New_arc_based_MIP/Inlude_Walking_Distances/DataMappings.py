@@ -6,6 +6,7 @@ This script is used to create a new Data foundation with the following propertie
     - The distance matrix is updated accordingly
     - The order of the nodes is redefined, so that the first node has order 0, the second node has order 1, etc.
 
+
 More specifically, the following steps are performed:
     1. Find the shortest distance from each building to the next node
     2. Create "request pairs" by coupling the origin and destination node
