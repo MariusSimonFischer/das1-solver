@@ -121,3 +121,4 @@ if __name__ == '__main__':
     walking_distancesx = [700]
 
     run_several_instances(pathx, benefit_ux, walking_distancesx)
+
