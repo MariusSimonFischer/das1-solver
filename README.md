@@ -6,7 +6,10 @@ Federico Malucelli, Maddalena Nonato & Stefano Pallottino published the paper bu
 This code is part of a Bachelor Thesis written at the Professorship of Business Analytics & Intelligent Systems at TU München.
 
 # Structure
-In the Bachelor_Thesis_Code directory, you find the used data, solving algorithms and analtical results used for the thesis. The directory Other incudes tests and pre-projects used to understand Gurobi better.
+In the Bachelor_Thesis_Code directory, you find the used data, solving algorithms and analtical results used for the thesis.
+The sub-directories include different parts of the project. The directory jsons contains the provided data from the Chair.
+Greed_Heuristic includes the Greedy Algorithm, Nearest_Neighbour_Heuristic is the directory for the adapted Nearest Neighbour Algorithm and New_arc_based_MIP contains the Gurobi Solver implementation. The two Computational_Results directories simply include analytical graphs and data outputs used for analysis within the Bachelor Thesis.
+
 
 
 
