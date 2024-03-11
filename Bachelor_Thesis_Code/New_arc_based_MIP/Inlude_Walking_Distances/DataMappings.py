@@ -16,6 +16,7 @@ More specifically, the following steps are performed:
 """
 
 
+
 data = None
 walking_distance = None
 
