@@ -22,7 +22,7 @@ def load_json(filename):
 
 def main():
     # Load the JSON file into a dictionary
-    path = '../../jsons/jsons_updated_old_tw/new_jsons/199_13_24_30_1_200_200_0.json'
+    path = '../jsons/jsons_updated_old_tw/new_jsons/199_13_24_30_1_200_200_0.json'
     data = load_json(path)
 
     """

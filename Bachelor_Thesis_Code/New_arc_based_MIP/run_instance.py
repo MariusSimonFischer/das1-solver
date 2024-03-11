@@ -133,15 +133,15 @@ def run_several_instances(path, benefit_u, walking_distances):
                             None, None, None]
 
                 # Save the data in a csv file
-                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/comp_with_opt_stops_updated_300.csv'
+                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/run_test.csv'
                 save_data_in_csv(data, csv_f)
 
 
 if __name__ == '__main__':
     current_folder = os.path.dirname(os.path.realpath(__file__))
-    pathx = os.path.join(current_folder, os.pardir, os.pardir, 'jsons', 'Jsons_updated_tw', 'jsons_new_tw')
+    pathx = os.path.join(current_folder, os.pardir, 'jsons', 'jsons_updated_new_tw', 'jsons_new_tw')
 
-    walking_distancesx = [300]
-    benefit_ux = [1100]
+    walking_distancesx = [700]
+    benefit_ux = [1000]
 
     run_several_instances(pathx, benefit_ux, walking_distancesx)
