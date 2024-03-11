@@ -16,6 +16,10 @@ class Stop:
 
 
 def initialize_stops():
+    """
+    Function to initialize the stops
+    :return: compulsory_stops, optional_stops
+    """
     route_nodes = dict_map.route_nodes
 
     compulsory_stops_data = [node for node in route_nodes if node['is_compulsory_stop']]
@@ -78,6 +82,11 @@ def build_graph(compulsory_stops: list, optional_stops: list) -> nx.Graph:
 
 
 def draw_graph(graph: nx.Graph):
+    """
+    Function to draw the graph
+    :param networkx graph
+    :return: None
+    """
     fig, ax = plt.subplots()
 
     node_pos = {node: (node.latitude, node.longitude) for node in graph.nodes()}

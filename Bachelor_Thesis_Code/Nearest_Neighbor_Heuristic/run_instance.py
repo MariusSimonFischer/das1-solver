@@ -87,9 +87,9 @@ def run_several_instances(path, benefit_u, walking_distances):
         route = scenario.split('_')[0]
         route_time = scenario.split('_')[1] + ':' + scenario.split('_')[2] + ':' + scenario.split('_')[3]
         percentage_of_copt_stops = scenario.split('_')[4]
-        optional_dist = scenario.split('_')[5]
-        comp_dist = scenario.split('_')[6]
-        seed = scenario.split('_')[7].split('.')[0]
+        # optional_dist = scenario.split('_')[5]
+        # comp_dist = scenario.split('_')[6]
+        # seed = scenario.split('_')[7].split('.')[0]
 
         for wd in walking_distances:
             for benefit in benefit_u:

@@ -112,6 +112,10 @@ class DASOptimizer:
         self.end_time = None
 
     def visualize_solution(self):
+        """
+        Function to visualize the solution
+        :return:
+        """
 
         # Get the values of decision variable x after optimization
         edge_values = {edge: var.x for edge, var in self.x.items()}
@@ -183,7 +187,7 @@ class DASOptimizer:
 
     def build_model(self):
         """
-        Function to build the model for the S-DAS problem
+        Function to build the model for the DAS problem
         :return:
         """
         self.start_time = t.time()
@@ -278,7 +282,7 @@ class DASOptimizer:
 
     def optimizer(self):
         """
-        Function to optimize the model
+        Function to optimize/ run the model
         :return:
         """
         self.model._vars = self.x
@@ -292,6 +296,14 @@ class DASOptimizer:
         self.model.optimize(lazy_callback)  # lazy_callback
 
     def several_instances(self):
+        """
+        Function to extract information about the solution
+        and prepare variables for the run instances
+        :return: num_segments, num_requests, served_requests, unserved_requests, used_nodes,
+                    unused_nodes, total_driven_distance, num_opt_stops, num_opt_stops_visited,
+                    num_opt_stops_not_visited, total_travel_time, arrival_time_at_comp_stops, solve_time,
+                    build_time, opt_gap, obj_val
+        """
         # Check if the model is solved to optimality
         if self.model.status == GRB.OPTIMAL:
             # Get values of served and unserved requests
