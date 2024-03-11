@@ -15,6 +15,7 @@ More specifically, the following steps are performed:
     making the order fit the distance matrix again
 """
 
+
 data = None
 walking_distance = None
 
