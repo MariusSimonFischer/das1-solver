@@ -12,25 +12,6 @@ Greed_Heuristic includes the Greedy Algorithm, Nearest_Neighbour_Heuristic is th
 
 # Running the Algorithm
 
-1. Running the Gurobi Solver: To run all instances the run_instances
-
-
-
-
-
-
-
-To run the algorithm you should run the following in your IDE terminal: *python generators\Segmentation.py [width_type] [instance] [speed] [number_of_samples] [dimension_of_samples] [standard_deviation] [epsilon] [time_window_width].* The following input arguments are valid:
-
-| Argument | Input|
-| ---------|----------|
-| width_type | fixed,adjustable |
-| instance | This represents the instance number, each instance in the data directory has an instance number, this can be found in \data\routes (e.g. Design_0-14-10-0.8-0.2_hybrid has the instance number 14) |
-| speed | Set of whole numbers |
-| number_of_samples | Set of whole numbers |
-| dimension_of_samples | Set of whole numbers |
-| standard_deviation | 0 - 100 |
-| epsilon | 0 - 1  |
-| time_window_width | Set of whole numbers |
-
-Running the algorithm with the fixed widht and the instance 22 with a 10 samples and 10 dimensions for each sample and with a speed argument of 25 and standard deviation value of 2, epsilon value of 0.05 and the time_window_width of 5 can be done via *python generators\Segmentation.py fixed 22 25 10 10 2 0.05 5.*
+1. Running the Gurobi Solver: To run all instances the run_instance.py file can be used. The file can be run via the terminal with the command *python New_arc_based_MIP/run_instance.py* or via the file directly. The file can be modified to run only specific instances or to change the output directory. The file will run the Gurobi Solver for all instances and save the results in the specified directory. The source data and directory name as well as parameters "Walking Distance" and "Benefit" can be changed in the run_instance.py file. Furthermore, the other python files include the logic behind. If only one specific instance should be run, the run.py can be used and the json can be specified in JSONLoader.py. solution_map.html shows a visualization of the single instance run with run.py.
+2. Running the Greedy Algorithm: To run the Greedy Algorithm, the run_instance.py file can be used. The file can be run via the terminal with the command *python Greedy_Heuristic/run_instance.py* or via the file directly. The file can be modified to run only specific instances or to change the output directory. The file will run the Greedy Algorithm for all instances and save the results in the specified directory. The source data and directory name as well as parameters "Walking Distance" and "Benefit" can be changed in the run_instance.py file. Furthermore, the other python files include the logic behind. If only one specific instance should be run, the run.py can be used and the json can be specified in JSONLoader.py. solution_map.html shows a visualization of the single instance run with run.py.
+3. Running the Nearest Neighbour Algorithm: To run the Nearest Neighbour Algorithm, the run_instance.py file can be used. The file can be run via the terminal with the command *python Nearest_Neighbour_Heuristic/run_instance.py* or via the file directly. The file can be modified to run only specific instances or to change the output directory. The file will run the Nearest Neighbour Algorithm for all instances and save the results in the specified directory. The source data and directory name as well as parameters "Walking Distance" and "Benefit" can be changed in the run_instance.py file. Furthermore, the other python files include the logic behind. If only one specific instance should be run, the run.py can be used and the json can be specified in JSONLoader.py. solution_map.html shows a visualization of the single instance run with run.py.

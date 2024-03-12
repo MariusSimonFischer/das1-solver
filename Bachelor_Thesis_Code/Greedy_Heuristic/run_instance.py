@@ -45,14 +45,14 @@ def run_instance(json, benefit_u, walking_distance):
     benefit_for_request = benefit_u
 
     # Initialize the DAS Object
-    nearest_neigbor_heuristic = solver.NearestNeighborHeuristic(benefit_for_request, dict_map.segments, dict_map.request_pairs,
+    greedy_heuristic = solver.GreedyHeuristic(benefit_for_request, dict_map.segments, dict_map.request_pairs,
                                               dict_map.compulsory_stops, dict_map.bounds, dict_map.distance_matrix,
                                               dict_map.time_matrix, dict_map.route_nodes)
 
-    # calling the functions from Gurobi_Solver_DAS.py
+    # calling the functions from heuristic.py
     (served_requests, unserved_requests, used_nodes, unused_nodes, total_driven_distance,
         arrival_time_at_comp_stops, solve_time, build_time, opt_gap, obj_val) \
-        = solver.NearestNeighborHeuristic.main(nearest_neigbor_heuristic)
+        = solver.GreedyHeuristic.main(greedy_heuristic)
 
     compulsory_stops = dict_map.compulsory_stops
     requests = dict_map.request_pairs
@@ -109,16 +109,16 @@ def run_several_instances(path, benefit_u, walking_distances):
                     data = [route, route_time, percentage_of_copt_stops, benefit, wd,
                             None, None, None, None, None, None, None, None, None, None, None, None, None]
 
-                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/solving_times_new_tw_nnh2.csv'
-
+                csv_f = os.path.dirname(os.path.realpath(__file__)) + '/results/run_test.csv'
                 save_data_in_csv(data, csv_f)
 
 
 if __name__ == '__main__':
     current_folder = os.path.dirname(os.path.realpath(__file__))
-    pathx = os.path.join(current_folder, os.pardir, 'jsons', 'Jsons_updated_tw', 'jsons_new_tw')
+    pathx = os.path.join(current_folder, os.pardir, 'jsons', 'jsons_updated_new_tw', 'jsons_new_tw')
 
     benefit_ux = [1000]
     walking_distancesx = [700]
 
     run_several_instances(pathx, benefit_ux, walking_distancesx)
+
