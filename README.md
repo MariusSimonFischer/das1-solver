@@ -12,7 +12,7 @@ Greed_Heuristic includes the Greedy Algorithm, Nearest_Neighbour_Heuristic is th
 
 # Running the Algorithm
 
-1. Running the Gurobi Solver: To run all instances the 
+1. Running the Gurobi Solver: To run all instances the run_instances
 
 
 
