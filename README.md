@@ -11,14 +11,14 @@ The sub-directories include different parts of the project. The directory jsons 
 Greedy_Heuristic includes the Greedy Algorithm, Nearest_Neighbour_Heuristic is the directory for the adapted Nearest Neighbour Algorithm and New_arc_based_MIP contains the Gurobi Solver implementation. The two Computational_Results directories simply include analytical graphs and data outputs used for analysis within the Bachelor Thesis.
 
 Within the Solving Algorithm directories, the following files are included:
-- run_instance.py: The main file to run the algorithm for all instances
-- run.py: The main file to run the algorithm for a single instance
+- run_instance.py: The file to run the algorithms for all instances
+- run.py: The file to run the algorithm for a single instance
 - JSONLoader.py: The file to load the data from the json file
 - DataMappings.py: The file to adjust data for the underlying problem
-- heuristic.py/ Gurobi_Solver_DAS.py: The files to implement the solving algorithm
-- SolutionMap.html: HTML code to visualize the solution on a map
+- heuristic.py/ Gurobi_Solver_DAS.py: The files to implement the solving algorithms
+- solution_map.html: HTML code to visualize the solution of a single instance on a map
 - networkx_graph.py: The file to build a networkx graph for the Gurobi_Solver_DAS.py
-Furthermore, the Gurobi Algorithm can be run without realizing optional stops by using the file Gurobi_Solver_DAS_no_optional_stops.py and adjusting Gurobi_Solver_DAS.py at comment (# Case without optional stops).
+Furthermore, the Gurobi Algorithm can be run without realizing optional stops by using the file Gurobi_Solver_DAS_no_optional_stops.py and adjusting Gurobi_Solver_DAS.py accordingly (uncommenting section: # Case without optional stops).
 
 # Running the Algorithms
 All three algorithms can be run using the same workflow:
