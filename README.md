@@ -1,7 +1,7 @@
 # DAS Scheduling
 This repository implements three solving mechanisms for a DAS1 scheduling problem. Thereby, two heuristics (an adapted
 Nearest Neighbour Heuristic, and Greedy Heuristic) and one MIP Solver (Gurobi Solver) is used.
-For further information of research: Federico Malucelli, Maddalena Nonato & Stefano Pallottino published the paper building the foundation to this analysis [link to paper](https://link.springer.com/chapter/10.1057/9780230372924_8).
+For further information on research: Federico Malucelli, Maddalena Nonato & Stefano Pallottino published a paper building the foundation to this analysis [link to paper](https://link.springer.com/chapter/10.1057/9780230372924_8).
 
 This code is part of a Bachelor Thesis written at the Professorship of Business Analytics & Intelligent Systems at TU München.
 
@@ -10,6 +10,16 @@ In the Bachelor_Thesis_Code directory, you find the used data, solving algorithm
 The sub-directories include different parts of the project. The directory jsons contains the provided data from the Chair.
 Greedy_Heuristic includes the Greedy Algorithm, Nearest_Neighbour_Heuristic is the directory for the adapted Nearest Neighbour Algorithm and New_arc_based_MIP contains the Gurobi Solver implementation. The two Computational_Results directories simply include analytical graphs and data outputs used for analysis within the Bachelor Thesis.
 
+Within each Solving Algorithm directory, the following files are included:
+- run_instance.py: The main file to run the algorithm for all instances
+- run.py: The main file to run the algorithm for a single instance
+- JSONLoader.py: The file to load the data from the json file
+- DataMappings.py: The file to adjust data for the underlying problem
+- heuristic.py/ Gurobi_Solver_DAS.py: The files to implement the solving algorithm
+- SolutionMap.html: HTML code to visualize the solution on a map
+- networkx_graph.py: The file to build a networkx graph for the Gurobi_Solver_DAS.py
+Furthermore, the Gurobi Algorithm can be run without realizing optional stops by using the file Gurobi_Solver_DAS_no_optional_stops.py and adjusting Gurobi_Solver_DAS.py at comment (# Case without optional stops).
+-
 # Running the Algorithms
 All three algorithms can be run using the same workflow:
 
