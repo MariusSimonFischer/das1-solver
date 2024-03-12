@@ -10,8 +10,8 @@ In the Bachelor_Thesis_Code directory, you find the used data, solving algorithm
 The sub-directories include different parts of the project. The directory jsons contains the provided data from the Chair.
 Greedy_Heuristic includes the Greedy Algorithm, Nearest_Neighbour_Heuristic is the directory for the adapted Nearest Neighbour Algorithm and New_arc_based_MIP contains the Gurobi Solver implementation. The two Computational_Results directories simply include analytical graphs and data outputs used for analysis within the Bachelor Thesis.
 
-# Running the Algorithm
-All three algorithms can be runned using the same workflow:
+# Running the Algorithms
+All three algorithms can be run using the same workflow:
 
 To run all instances the run_instance.py file within each directory can be used. The file can be run via the terminal with the command *python .../run_instance.py* or via the file directly. The file can be modified to run only specific instances or to change input and output directories and names. The file will run the Gurobi Solver for all instances and save the results (a Table with comprehensive statistics) in the specified directory. The source data and directory name as well as parameters "Walking Distance" and "Benefit" can be changed in the run_instance.py file. Furthermore, the other python files include the logic behind. If only one specific instance should be run, the run.py can be used and the json can be specified in JSONLoader.py. The solution_map.html shows a map visualization of the single instance run with run.py (open for example in browser).
 
