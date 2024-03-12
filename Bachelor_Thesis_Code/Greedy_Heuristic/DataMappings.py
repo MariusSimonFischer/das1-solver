@@ -247,6 +247,7 @@ def add_segment_h():
     global route_nodes
     current_segment = 0
 
+    # iterate over route_nodes and add segment_h
     for entry in route_nodes:
         if entry['is_compulsory_stop']:
             current_segment += 1
@@ -315,6 +316,7 @@ def init_segments_list():
     global segments
     segments = []
     n = 0
+    # iterate over route_nodes and add segment to segments list
     for entry in route_nodes:
         if entry['is_compulsory_stop']:
             n += 1

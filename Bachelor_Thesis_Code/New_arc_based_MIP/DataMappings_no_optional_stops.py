@@ -1,6 +1,8 @@
 from datetime import datetime
 
-""""
+"""
+Adjusted DataMappings.py: In case no optional stops are allowed
+
 This script is used to create a new Data foundation with the following properties:
     - Only the nodes that are in the request pairs are kept
     - The distance matrix is updated accordingly
