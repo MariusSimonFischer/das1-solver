@@ -10,7 +10,7 @@ In the Bachelor_Thesis_Code directory, you find the used data, solving algorithm
 The sub-directories include different parts of the project. The directory jsons contains the provided data from the Chair.
 Greedy_Heuristic includes the Greedy Algorithm, Nearest_Neighbour_Heuristic is the directory for the adapted Nearest Neighbour Algorithm and New_arc_based_MIP contains the Gurobi Solver implementation. The two Computational_Results directories simply include analytical graphs and data outputs used for analysis within the Bachelor Thesis.
 
-Within the Solving Algorithm directories, the following files are included:
+Within the solving algorithm directories, the following files are included:
 - run_instance.py: The file to run the algorithms for all instances
 - run.py: The file to run the algorithm for a single instance
 - JSONLoader.py: The file to load the data from the json file
