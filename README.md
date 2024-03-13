@@ -19,7 +19,7 @@ Within the solving algorithm directories, the following files are included:
 - solution_map.html: HTML code to visualize the solution of a single instance on a map
 - networkx_graph.py: The file to build a networkx graph for the Gurobi_Solver_DAS.py
 
-Furthermore, the Gurobi Algorithm can be run without realizing optional stops by using the file Gurobi_Solver_DAS_no_optional_stops.py and adjusting Gurobi_Solver_DAS.py accordingly (uncommenting section: # Case without optional stops).
+Furthermore, the Gurobi Algorithm can be run without realizing optional stops by using the file Gurobi_Solver_DAS_no_optional_stops.py and adjusting Gurobi_Solver_DAS.py accordingly (uncommenting section: # Case without optional stops). The Files run_instance.py and run.py have to import the respective file accordingly.
 
 # Running the Algorithms
 All three algorithms can be run using the same workflow:
