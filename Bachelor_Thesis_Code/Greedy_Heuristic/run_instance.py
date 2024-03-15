@@ -114,6 +114,9 @@ def run_several_instances(path, benefit_u, walking_distances):
 
 
 if __name__ == '__main__':
+    """
+    Main function to run the instances - beneifit_ux and walking_distancesx can be adjusted to run the instances
+    """
     current_folder = os.path.dirname(os.path.realpath(__file__))
     pathx = os.path.join(current_folder, os.pardir, 'jsons', 'jsons_updated_new_tw', 'jsons_new_tw')
 
