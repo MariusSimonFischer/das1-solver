@@ -7,6 +7,12 @@ from folium import plugins
 
 
 def lazy_callback(model, where):
+    """
+    Function to add lazy constraints to the model
+    :param model:
+    :param where:
+    :return:
+    """
     if where == GRB.Callback.MIPSOL:
         # Extract the solution values
         x_values = model.cbGetSolution(model._vars)
@@ -25,6 +31,11 @@ def lazy_callback(model, where):
 
 # Function to find subtours in the solution
 def find_subtour(used_edges):
+    """
+    Function to find subtours in the solution
+    :param used_edges:
+    :return:
+    """
     subtours = list()
 
     while len(used_edges) > 0:
