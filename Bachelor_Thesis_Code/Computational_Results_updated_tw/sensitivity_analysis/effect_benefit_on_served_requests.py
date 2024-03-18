@@ -19,7 +19,7 @@ plt.plot(mean_values['benefit'], mean_values['served_requests'], label='Average 
 plt.plot(mean_values['benefit'], mean_values['unserved_requests'], label='Average Unserved Requests', marker='x', color = 'red')
 
 # plt.title('Average Number of Served vs. Unserved Requests by Benefit')
-plt.xlabel('Benefit', fontsize=12)
+plt.xlabel('Benefit (units)', fontsize=12)
 plt.ylabel('Number of Requests', fontsize=12)
 plt.legend()
 # Adding grid for better readability
@@ -28,4 +28,4 @@ plt.grid(True)
 plt.tight_layout()
 
 
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_b_on_sr_50.2.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_b_on_sr_50.2_new.pdf')

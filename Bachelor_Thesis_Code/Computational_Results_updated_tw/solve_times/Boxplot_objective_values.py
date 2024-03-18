@@ -29,13 +29,13 @@ combined_df = pd.concat([
 # Plot with the same layout as the provided box plot but adjusted for 'objective_value'
 plt.figure(figsize=(10, 6))
 sns.boxplot(x='method', y='obj_val', data=combined_df, color='k', palette=['0.75', '0.5', '0.25'])
-plt.ylabel('Objective Value')
+plt.ylabel('Objective Value (units)')
 plt.xlabel('Method')
 plt.xticks(rotation=0)
 plt.tight_layout()
 
 # Show the plot
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/solve_times/results/objv_methods2.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/solve_times/results/objv_methods2_new.pdf')
 
 
 

@@ -12,9 +12,9 @@ data = pd.read_csv(file_path)
 plt.figure(figsize=(10, 6))
 sns.boxplot(x='percentage_of_compulsory_stops', y='obj_val', data=data, color='k', palette=['0.75', '0.5', '0.25'])
 #plt.title('Effect of Compulsory Stops Percentage on Objective Value')
-plt.xlabel('Percentage of Compulsory Stops', fontsize=12)
-plt.ylabel('Objective Value', fontsize=12)
+plt.xlabel('Percentage of Compulsory Stops')
+plt.ylabel('Objective Value (units)')
 
 # Save the plot as a PDF file
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/varying_cs_on_objval.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/varying_cs_on_objval_new.pdf')
 

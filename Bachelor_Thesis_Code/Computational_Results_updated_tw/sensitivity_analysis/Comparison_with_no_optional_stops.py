@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the first CSV file
-df_no_optional_stops = pd.read_csv('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/data/comp_no_opt_stops_updated_250.csv')
+df_no_optional_stops = pd.read_csv('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/data/comp_no_opt_stops_updated.csv')
 # Load the second CSV file
-df_with_optional_stops = pd.read_csv('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/data/comp_with_opt_stops_updated_250.csv')
+df_with_optional_stops = pd.read_csv('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/data/comp_with_opt_stops.csv')
 
 # Create a combined DataFrame for comparison
 df_combined = pd.DataFrame({
@@ -25,6 +25,6 @@ plt.xlabel('Type of Bus Line')
 plt.xticks(rotation=0)
 plt.tight_layout()
 # Save the plot as a PDF file
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/comp_box_plot_updated_250.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/comp_box_plot_updated_500_new.pdf')
 
 

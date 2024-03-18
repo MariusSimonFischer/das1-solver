@@ -22,12 +22,12 @@ sns.set_style("whitegrid")
 plt.figure(figsize=(12, 8))
 plt.plot(avg_served_requests_per_bin['bin_mid'], avg_served_requests_per_bin['served_requests'], marker='o', linestyle='-', color = 'blue')
 # plt.title('Average Served Requests by Travel Distance Interval')
-plt.xlabel('Travel Distance', fontsize=12)
-plt.ylabel('Served Requests',   fontsize=12)
+plt.xlabel('Travel Distance (meters)', fontsize=12)
+plt.ylabel('Average Served Requests',   fontsize=12)
 plt.tight_layout()
 plt.grid(True)
 
 
 
 # Save the plot as a PDF file
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_tt_on_sr.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_tt_on_sr_new.pdf')

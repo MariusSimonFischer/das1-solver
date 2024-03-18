@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Load your DataFrame as 'df'
-df = pd.read_csv('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/data/b_and_wd_on_sr_higher_numbers.csv')
+df = pd.read_csv('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/data/b_and_wd_on_sr.csv')
 
 # Calculate averages for each combination of 'benefit' and 'walking_distance'
 grouped = df.groupby(['benefit', 'walking_distance'])['served_requests'].mean().reset_index()
@@ -24,8 +24,8 @@ for xi, yi, zi in zip(x, y, z):
     ax.plot([xi], [yi], [zi], marker="o", color='b')  # This plots the point at the top.
 
 # Labeling axes
-ax.set_xlabel('Benefit', fontsize=12)
-ax.set_ylabel('Walking Distance', fontsize=12)
+ax.set_xlabel('Benefit (units)', fontsize=12)
+ax.set_ylabel('Walking Distance (meters)', fontsize=12)
 ax.set_zlabel('Average Served Requests', fontsize=12)
 
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/b_and_wd_onsr_3D_test_higher_numbers.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/b_and_wd_onsr_3D_test_new.pdf')

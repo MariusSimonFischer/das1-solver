@@ -13,11 +13,11 @@ plt.figure(figsize=(12, 8))
 plt.plot(mean_objective_values['walking_distance'], mean_objective_values['obj_val'], color='blue', marker='o')
 
 # plt.title('Mean Objective Value vs. Walking Distance', fontsize=16)
-plt.xlabel('Walking Distance', fontsize=12)
-plt.ylabel('Objective Value', fontsize=12)
+plt.xlabel('Walking Distance (meters)', fontsize=12)
+plt.ylabel('Objective Value (units)', fontsize=12)
 
 plt.grid(True)
 plt.tight_layout()
 
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_wd_on_objval_25.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_wd_on_objval_25_new.pdf')
 

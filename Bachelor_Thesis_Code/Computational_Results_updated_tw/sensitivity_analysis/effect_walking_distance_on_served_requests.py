@@ -17,7 +17,7 @@ plt.plot(mean_values['walking_distance'], mean_values['unserved_requests'], labe
 
 # Adding title and labels
 # plt.title('Impact of Walking Distance on Served and Unserved Requests')
-plt.xlabel('Walking Distance', fontsize=12)
+plt.xlabel('Walking Distance (meters)', fontsize=12)
 plt.ylabel('Number of Requests', fontsize=12)
 
 # Adding legend
@@ -29,5 +29,5 @@ plt.grid(True)
 # Ensuring layout is tight so everything fits without overlapping
 plt.tight_layout()
 
-plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_wd_on_sr_25.pdf')
+plt.savefig('/Users/mariusfischer/Desktop/Bachelor Thesis/Business Analytics & Intelligent Systems/Coding/Code/Bachelor_Thesis_Code/Computational_Results_updated_tw/sensitivity_analysis/results/effect_wd_on_sr_25_new.pdf')
 
